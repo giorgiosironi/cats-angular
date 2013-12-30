@@ -19,7 +19,7 @@ cats.directive("more", function() {
     }
 })
 
-cats.factory("CatsList", function () {
+cats.service("CatsList", function () {
     var templateUrl = "http://thecatapi.com/api/images/get?format=src&type=jpg"
     var max = 2
     var adding = 2
@@ -43,13 +43,11 @@ cats.factory("CatsList", function () {
     for (i = 0; i < max; i++) {
         list[i] = newCat()
     }
-    return {
-        all : list,
-        more : function () {
-            min = list.length
-            for (i = min; i < min + adding; i++) {
-                list[i] = newCat()
-            }
+    this.all = list;
+    this.more = function () {
+        min = this.all.length
+        for (i = min; i < min + adding; i++) {
+            this.all[i] = newCat()
         }
     }
 })
