@@ -3,7 +3,10 @@
     <head>
     </head>
     <body>
-        {{ "Hello, " + "World" }}
-        <script src="http://code.angularjs.org/1.2.6/angular.js"></script>
+        <div ng-controller="HelloController">
+            <h1>{{data.message}}</h1>
+            <script src="http://code.angularjs.org/1.2.6/angular.js"></script>
+            <script src="main.js"></script>
+        </div>
     </body>
 </html>
