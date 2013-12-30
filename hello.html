@@ -1,17 +1,17 @@
 <!DOCTYPE html>
-<html ng-app>
+<html ng-app='greetings'>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     </head>
     <body>
-        <div ng-controller="HelloController">
-            <input type="text" ng-model="data.message" />
-            <h1>{{data.message}}</h1>
+        <div ng-controller="HelloController as c">
+            <input type="text" ng-model="data.who" />
+            <h1>{{c.message()}}</h1>
         </div>
 
-        <div ng-controller="GoodbyeController">
-            <input type="text" ng-model="data.message" />
-            <h1>{{data.message}}</h1>
+        <div ng-controller="GoodbyeController as c">
+            <input type="text" ng-model="data.who" />
+            <h1>{{c.message()}}</h1>
         </div>
         <script src="http://code.angularjs.org/1.2.6/angular.js"></script>
         <script src="main.js"></script>
