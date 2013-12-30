@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html ng-app="cats">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style type="text/css">
+        body {
+            padding: 0px;
+            margin: 0px;
+        }
+        .box {
+            width: 100%;
+            float: left;
+            padding: 0.2em;
+            font-size: 40px;
+        }
+        .cat {
+            border-bottom: 1px solid navy;
+            height: 164px;
+        }
+        .cat img {
+            float: right;
+            max-height: 160px;
+        }
+        .selected {
+            background-color: #66CCFF;
+        }
+    </style>
+</head>
+<body>
+    <div ng-controller="CatsController as c">
+        <div class="box cat" enter="selected" ng-repeat="cat in c.list.all">{{cat.name}} <img src="{{cat.avatar}}" /></div>
+        <div class="box" more>More cats!</div>
+    </div>
+    <script src="http://code.angularjs.org/1.2.6/angular.js"></script>
+    <script src="cats.js"></script>
+</body>
+</html>
