@@ -54,6 +54,7 @@ cats.service("CatsList", function () {
 
 CatsController = function($scope, CatsList) {
     this.list = CatsList
+    // TODO: simplify
     $scope.more = function() {
         $scope.$apply(function() {
             CatsList.more()
