@@ -30,7 +30,7 @@
 </head>
 <body>
     <div ng-controller="CatsController as c">
-        <div class="box cat" enter="selected" ng-repeat="cat in c.list.all">{{cat.name}} <img src="{{cat.avatar}}" /></div>
+        <div cat ng-repeat="cat in c.list.all"></div>
         <div class="box" more>More cats!</div>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.6/angular.min.js"></script>

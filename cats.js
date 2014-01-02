@@ -11,7 +11,14 @@ cats.directive("enter", function() {
     }
 })
 
+cats.directive("cat", function() {
+    return {
+        "template" : '<div enter="selected" class="box cat">{{cat.name}} <img src="{{cat.avatar}}" /></div>'
+    }
+})
+
 cats.directive("more", function() {
+    // TODO: try to use controller: 
     return function(scope, element, attrs) {
         element.bind("mouseover", function () {
             scope.more()
@@ -51,6 +58,9 @@ cats.service("CatsList", function () {
         }
     }
 })
+
+// TODO: Cat directive for a single one,
+// which use isolated scope
 
 CatsController = function($scope, CatsList) {
     this.list = CatsList
