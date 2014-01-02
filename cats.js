@@ -17,14 +17,14 @@ cats.directive("cat", function() {
     }
 })
 
-cats.directive("more", function() {
+cats.directive("over", function() {
     return {
         "scope" : {
-            "more" : "&"
+            "over" : "&"
         },
         "link" : function(scope, element, attrs) {
             element.bind("mouseover", function () {
-                scope.more()
+                scope.over()
             })
         }
     }
