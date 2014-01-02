@@ -9,6 +9,36 @@
             margin: 0px;
             max-width: 40em;
         }
+        .tabbable ul {
+            float: left;
+            width: 100%;
+            padding: 0px;
+            margin: 0px;
+            list-style-type: none;
+        }
+        .tabbable ul li {
+            float: left;
+            width: 50%;
+            padding: 0px;
+            margin: 0px;
+            border-bottom: 1px solid navy;
+        }
+        .tabbable ul li.active {
+            background-color: #CCCCFF;
+        }
+        .tabbable ul li a {
+            width: 98%;
+            display: block;
+            padding: 10px 1%;
+            margin: 0px;
+            text-align: center;
+            text-decoration: none;
+            color: navy;
+            font-size: 20px;
+        }
+        .tab-content {
+            float: left;
+        }
         .box {
             width: 100%;
             float: left;
@@ -26,6 +56,9 @@
         .selected {
             background-color: #66CCFF;
         }
+        p {
+            padding: 10px;
+        }
     </style>
 </head>
 <body>
@@ -37,7 +70,9 @@
         </div>
         </my-pane>
         <my-pane title="About">
-            Giorgio Sironi playing with AngularJS
+            <p>
+            <a href="http://giorgiosironi.com">Giorgio Sironi playing with AngularJS</a>
+            </p>
         </my-pane>
     </my-tabs>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.6/angular.min.js"></script>
