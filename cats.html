@@ -29,10 +29,17 @@
     </style>
 </head>
 <body>
-    <div ng-controller="CatsController as c">
-        <div cat enter="selected" class="box cat" ng-repeat="cat in c.list.all"></div>
-        <div class="box" more>More cats!</div>
-    </div>
+    <my-tabs>
+        <my-pane title="List">
+        <div ng-controller="CatsController as c">
+            <div cat enter="selected" class="box cat" ng-repeat="cat in c.list.all"></div>
+            <div class="box" more>More cats!</div>
+        </div>
+        </my-pane>
+        <my-pane title="About">
+            Giorgio Sironi playing with AngularJS
+        </my-pane>
+    </my-tabs>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.6/angular.min.js"></script>
     <script src="cats.js"></script>
 </body>
