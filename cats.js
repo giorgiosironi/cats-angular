@@ -65,9 +65,6 @@ cats.service("CatsList", function () {
     }
 })
 
-// TODO: Cat directive for a single one,
-// which use isolated scope
-
 CatsController = function($scope, CatsList) {
     this.list = CatsList
     $scope.more = function() {
