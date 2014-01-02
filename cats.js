@@ -24,7 +24,9 @@ cats.directive("over", function() {
         },
         "link" : function(scope, element, attrs) {
             element.bind("mouseover", function () {
-                scope.over()
+                scope.$apply(function() {
+                    scope.over()
+                })
             })
         }
     }
@@ -68,11 +70,8 @@ cats.service("CatsList", function () {
 
 CatsController = function($scope, CatsList) {
     this.list = CatsList
-    // TODO: simplify
     $scope.more = function() {
-        $scope.$apply(function() {
-            CatsList.more()
-        })
+        CatsList.more()
     }
 }
 
