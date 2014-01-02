@@ -13,7 +13,7 @@ cats.directive("enter", function() {
 
 cats.directive("cat", function() {
     return {
-        "template" : '<div enter="selected" class="box cat">{{cat.name}} <img src="{{cat.avatar}}" /></div>'
+        "template" : '<div>{{cat.name}} <img src="{{cat.avatar}}" /></div>'
     }
 })
 

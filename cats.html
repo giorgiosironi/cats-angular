@@ -30,7 +30,7 @@
 </head>
 <body>
     <div ng-controller="CatsController as c">
-        <div cat ng-repeat="cat in c.list.all"></div>
+        <div cat enter="selected" class="box cat" ng-repeat="cat in c.list.all"></div>
         <div class="box" more>More cats!</div>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.6/angular.min.js"></script>
