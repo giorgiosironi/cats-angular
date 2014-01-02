@@ -18,11 +18,15 @@ cats.directive("cat", function() {
 })
 
 cats.directive("more", function() {
-    // TODO: try to use controller: 
-    return function(scope, element, attrs) {
-        element.bind("mouseover", function () {
-            scope.more()
-        })
+    return {
+        "scope" : {
+            "more" : "&"
+        },
+        "link" : function(scope, element, attrs) {
+            element.bind("mouseover", function () {
+                scope.more()
+            })
+        }
     }
 })
 
